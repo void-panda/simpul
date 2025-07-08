@@ -1,7 +1,7 @@
 
-# 🌐 Komunitas Website - Laravel Project
+# 🌐 Website Simpul Pemuda
 
-Website resmi komunitas untuk menampilkan informasi profil, press release, kegiatan, serta menerima dan menampilkan data donasi manual. Dibangun dengan Laravel dan Filament Admin Panel.
+Website resmi komunitas Simpul Pemuda untuk menampilkan informasi profil, press release, kegiatan, serta menerima dan menampilkan data donasi manual. Dibangun dengan Laravel dan Filament Admin Panel.
 
 ## 🚀 Fitur Utama
 
