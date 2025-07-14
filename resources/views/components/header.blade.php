@@ -3,7 +3,7 @@
 
       <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <h1 class="sitename border border-dark px-1">Simpul</h1>
+        <h4 class="sitename border border-dark px-1">Simpul</h4>
       </a>
 
       <nav id="navmenu" class="navmenu">

@@ -28,7 +28,7 @@ class ContactController extends Controller
         ]);
 
         // Kirim ke email admin
-        Mail::to('admin@yourcommunity.org')->send(new ContactMessage($validated));
+        Mail::to('hamzankechil@gmail.com')->send(new ContactMessage($validated));
 
         return back()->with('success', 'Pesan berhasil dikirim!');
     }

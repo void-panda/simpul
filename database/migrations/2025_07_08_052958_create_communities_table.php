@@ -13,7 +13,6 @@ return new class extends Migration {
             // Identitas
             $table->string('name');
             $table->string('slug')->unique()->nullable();
-            $table->string('logo')->nullable();
             $table->text('description');
             $table->text('vision')->nullable();
             $table->text('mission')->nullable();

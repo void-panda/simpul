@@ -8,6 +8,7 @@ use App\Models\Donation;
 use App\Models\DonationAccount;
 use App\Models\Event;
 use App\Models\News;
+use App\Models\Partner;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         News::factory()->count(15)->create();
         Event::factory()->count(10)->create();
         DonationAccount::factory(2)->create();
+        Partner::factory()->count(5)->create();
         Donation::factory()->count(15)->create();
         Contact::factory()->count(4)->create();
 
@@ -36,7 +38,6 @@ class DatabaseSeeder extends Seeder
     Blanditiis quis officia distinctio officiis soluta delectus facilis excepturi.',
             'email' => 'info@harapankita.org',
             'phone' => '0812-3456-7890',
-            'logo' => 'simpul-pemuda.png',
             'website' => 'simpul-pemuda.com',
             'address' => 'Jl. Bersama No. 1, Yogyakarta',
         ]);

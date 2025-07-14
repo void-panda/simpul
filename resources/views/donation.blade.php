@@ -30,6 +30,21 @@
             
             {{-- Form Donasi Manual --}}
             <div class="col-md-7">
+                @session('success')
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    {{ session('success') }}
+                </div>
+                @endsession
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <h3 class="mb-4">Catat Donasi Anda</h3>
                 <form method="POST" action="{{ route('donation.store') }}" enctype="multipart/form-data">
                     @csrf
@@ -40,8 +55,8 @@
                             <input type="text" name="donor_name" class="form-control" value="{{ old('donor_name') }}">
                         </div>
                         <div class="col-md-6">
-                            <label for="donor_email" class="form-label">Email (Opsional)</label>
-                            <input type="email" name="donor_email" class="form-control" value="{{ old('donor_email') }}">
+                            <label for="donor_whatsapp" class="form-label">Whatsapp Number*</label>
+                            <input type="tel" name="donor_whatsapp" class="form-control" value="{{ old('donor_whatsapp') }}">
                         </div>
                     </div>
 

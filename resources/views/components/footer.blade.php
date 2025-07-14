@@ -1,3 +1,8 @@
+@php
+$community = DB::table('communities')->get();
+@endphp
+
+
 <footer id="footer" class="footer dark-background">
 
     <div class="container footer-top">
@@ -5,15 +10,15 @@
         <div class="col-lg-8 footer-about">
           <div class="d-flex align-items-center gap-5">
             <a href="index.html" class="logo d-flex align-items-center">
-              <h1 class="sitename border border-white px-1">Simpul</h1>
+              <span class="text-sm border border-white px-1">{{ $community->first()->name ?? 'Simpul' }}</span>
             </a>
             <div class="footer-contact">
-              <p>Jl. Cendrawasih Sumbawa</p>
-              <p>Sumbawa Besar, Nusa Tenggara Barat</p>
+              <p>{{ $community->first()->address ?? 'Jl. Cendrawasih Sumbawa' }}</p>
+              <p>{{ $community->first()->city ?? 'Sumbawa Besar, Nusa Tenggara Barat' }}</p>
             </div>
             <div class="footer-contact">
-              <p><strong>Phone:</strong> <span>+62 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>admin@simpul.com</span></p>
+              <p><strong>Phone:</strong> <span>{{ $community->first()->phone ?? '+62 5589 55488 55' }}</span></p>
+              <p><strong>Email:</strong> <span>{{ $community->first()->email ?? 'admin@simpul.com' }}</span></p>
             </div>
           </div>
           <div class="social-links d-flex mt-4">

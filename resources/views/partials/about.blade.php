@@ -13,7 +13,7 @@
 
     <h2 class="text-center mb-3">Visi dan Misi</h2>
     <div class="row my-3 align-items-center">
-        <div class="col-md-6">
+        <div class="col-md-6 text-center md:mb-0 mb-4">
             <h3 class="text-center">Visi</h3>
             {!! $community->vision !!}
         </div>

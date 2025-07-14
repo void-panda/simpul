@@ -24,12 +24,7 @@ class CommunityResource extends Resource
 
     public static function form(Form $form): Form
     {
-         return $form->schema([
-            FileUpload::make('logo')
-                ->directory('community/logo')
-                ->required()
-                ->image(),
-
+        return $form->schema([
             TextInput::make('name')->required(),
             RichEditor::make('description')->required(),
             RichEditor::make('vision')->required(),

@@ -11,24 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('donations', function (Blueprint $table) {
+        Schema::create('partners', function (Blueprint $table) {
             $table->id();
-            $table->string('donor_name')->nullable();
-            $table->string('donor_whatsapp');
-            $table->decimal('amount', 15, 2);
-            $table->text('note')->nullable();
-            $table->timestamp('donated_at');
-            $table->string('proof')->nullable(); // file bukti transfer
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->string('logo')->nullable(); // untuk upload logo partner (opsional)
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('donations');
+        Schema::dropIfExists('partners');
     }
 };

@@ -18,13 +18,6 @@ class ContactMessage extends Mailable
      */
     public function __construct(public array $data) {}
 
-    public function build()
-    {
-        return $this->subject('Pesan Kontak Baru dari Website')
-            ->view('email-template')
-            ->with('data', $this->data);
-    }
-
 
     /**
      * Get the message envelope.
@@ -42,7 +35,8 @@ class ContactMessage extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'email-template',
+            with: ['data' => $this->data],
         );
     }
 

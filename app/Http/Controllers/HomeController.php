@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Community;
 use App\Models\Event;
 use App\Models\News;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,6 +27,7 @@ class HomeController extends Controller
             'events' => Event::latest('start_date')->take(3)->get(),
             'community' => Community::first(),
             'news' => News::latest('published_at')->take(3)->get(),
+            'partners' => Partner::all(), // Tambahkan ini
         ]);
     }
 }

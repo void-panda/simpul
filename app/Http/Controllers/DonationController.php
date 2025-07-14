@@ -22,10 +22,10 @@ class DonationController extends Controller
     {
         $data = $request->validate([
             'donor_name' => 'nullable|string|max:255',
-            'donor_email' => 'nullable|email|max:255',
+            'donor_whatsapp' => 'nullable|regex:/^(\+\s?)?6?2?08[1-9][0-9]{6,11}$/|max:255',
             'amount' => 'required|numeric|min:1',
+            'proof' => 'required|image|max:2048',
             'note' => 'nullable|string',
-            'proof' => 'nullable|image|max:2048',
         ]);
 
         if ($request->hasFile('proof')) {
